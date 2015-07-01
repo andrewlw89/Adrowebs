@@ -113,3 +113,62 @@ img {
   width: 100px;
   height: 100px;
 }
+
+/* line 46, ../sass/style.scss */
+.carousel {
+  position: relative;
+}
+
+/* line 50, ../sass/style.scss */
+.shots-container {
+  width: 100%;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  padding: 1em 0;
+}
+
+/* line 58, ../sass/style.scss */
+.shots {
+  overflow: hidden;
+  margin: 0;
+  padding: 0 2%;
+  /*
+   * Shot width = 400px + 20px margin + 20px padding + 2px border
+   * 442 * 10 (# of shots)
+   */
+  width: 1768px;
+  min-height: 300px;
+}
+@media screen and (max-width: 450px) {
+  /* line 58, ../sass/style.scss */
+  .shots {
+    /*
+     * Shot width = 300px + 20px margin + 20px padding + 2px border
+     * 342 * 4 (# of shots)
+     */
+    width: 1360px;
+    /* 340 * 4 */
+    min-height: 250px;
+  }
+}
+/* line 78, ../sass/style.scss */
+.shots li {
+  float: left;
+  width: 400px;
+  height: 300px;
+  margin: 0 10px;
+  padding: 10px;
+  background: #fff url(../images/loading.gif) 100px 50% no-repeat;
+  border: 1px solid #ddd;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+@media screen and (max-width: 450px) {
+  /* line 78, ../sass/style.scss */
+  .shots li {
+    width: 300px;
+    height: 225px;
+  }
+}
