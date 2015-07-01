@@ -5,7 +5,17 @@ $.ajax({
 });
 
 function jsonFlickrApi(response) {
-	console.log(response);
+	var responseArray = response.photos.photo;
+	responseArray.forEach(function(data) {
+		var farm = data.farm;
+		var id = data.id;
+		var server = data.server;
+		var secret = data.secret;
+		var imageUrl = "https://farm" + farm + ".staticflickr.com/" + server + "/" + id + "_" + secret + ".jpg"
+		var imageTag = '<li><img src="' + imageUrl + '"></li>'
+		$(".loading").remove();
+		$(".shots").append(imageTag);
+	})
 
 
 }
