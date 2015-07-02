@@ -13,12 +13,11 @@
 			$.ajax({ 
 				type: "GET",
 				dataType: "jsonp",
-				url: "https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=69856db44f32145ff44c1243b55bd615&user_id=132728132%40N04&format=json"
+				url: "https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=46703527e4effd0b1cf5f879440716c3&user_id=132728132%40N04&format=json"
 			});
 			function jsonFlickrApi(response) {
 				var responseArray = response.photos.photo;
 				responseArray.forEach(function(data) {
-					console.log(data);
 					var farm = data.farm;
 					var id = data.id;
 					var server = data.server;
