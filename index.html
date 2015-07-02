@@ -10,36 +10,29 @@
 		<link href="stylesheets/style.css" type="text/css" rel="stylesheet" >
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,400italic' rel='stylesheet' type='text/css'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script>
-			$.ajax({ 
-				type: "GET",
-				dataType: "jsonp",
-				url: "https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=46703527e4effd0b1cf5f879440716c3&user_id=132728132%40N04&format=json"
+		<script src="scripts/jquery.combinedScroll.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$('.page-navigation').onePageNav();
 			});
-			function jsonFlickrApi(response) {
-				var responseArray = response.photos.photo;
-				responseArray.forEach(function(data) {
-					var farm = data.farm;
-					var id = data.id;
-					var server = data.server;
-					var secret = data.secret;
-					var title = data.title;
-					var imageUrl = "https://farm" + farm + ".staticflickr.com/" + server + "/" + id + "_" + secret + ".jpg";
-					var imageTag = '<li><a href=#><img src="' + imageUrl + '" alt="' + title + '"></a></li>';
-					$(".loading").remove();
-					$(".shots").append(imageTag);
-				});
-			}
 		</script>
 	</head>
 	<body>
-		<div class="full-page bg-whitesmoke content1">
+	<div id="top"></div>
+		<div class="full-page bg-whitesmoke">
+			<nav class="site-navigation page-navigation">
+				<ul class="menu">
+					<li class="current"><a href="#top">Top</a></li>
+					<li><a href="#section-1">Projects</a></li>
+					<li><a href="#section-2">Contact</a></li>
+				</ul>
+			</nav>
 			<header class="header">
 			    <img src="images/me.jpg" width="100" height="100" class="avatar" />
 			    <h1>My name is Andrew Williams. <br />I'm a designer in Jacksonville.</h1>
 			</header>
 		</div>
-		<div class="full-page content2">
+		<div class="full-page" id="section-1">
 			<section class="content">
 			    <h1 class="projects">Latest Projects</h1>
 			    <div class="carousel">
@@ -54,7 +47,7 @@
 			    <p>&larr; scroll to view &rarr;</p>
 			</section>
 		</div>
-		<div class="full-page bg-whitesmoke content3">
+		<div class="full-page bg-whitesmoke" id="section-2">
 			<footer class="footer">
 			    <h1>Find Me on the Web</h1>
 			    <p>You can contact or follow me via any of these services:</p>
@@ -67,4 +60,25 @@
 			</footer>
 		</div>
 	</body>
+	<script>
+		$.ajax({ 
+			type: "GET",
+			dataType: "jsonp",
+			url: "https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=46703527e4effd0b1cf5f879440716c3&user_id=132728132%40N04&format=json"
+		});
+		function jsonFlickrApi(response) {
+			var responseArray = response.photos.photo;
+			responseArray.forEach(function(data) {
+				var farm = data.farm;
+				var id = data.id;
+				var server = data.server;
+				var secret = data.secret;
+				var title = data.title;
+				var imageUrl = "https://farm" + farm + ".staticflickr.com/" + server + "/" + id + "_" + secret + ".jpg";
+				var imageTag = '<li><a href=#><img src="' + imageUrl + '" alt="' + title + '"></a></li>';
+				$(".loading").remove();
+				$(".shots").append(imageTag);
+			});
+		}
+	</script>
 </html>

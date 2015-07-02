@@ -88,26 +88,46 @@ body {
 }
 
 /* line 25, ../sass/style.scss */
+nav.page-navigation {
+  width: 80px;
+  background-color: #ebebeb;
+  position: fixed;
+  top: 10%;
+  left: 0;
+}
+
+/* line 32, ../sass/style.scss */
+nav.page-navigation li {
+  width: 100%;
+}
+
+/* line 35, ../sass/style.scss */
+nav.page-navigation a {
+  padding: 0.6em 10%;
+  width: 80%;
+}
+
+/* line 40, ../sass/style.scss */
 a {
   text-decoration: none;
 }
 
-/* line 29, ../sass/style.scss */
+/* line 44, ../sass/style.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 35, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 .header {
   padding-top: 30vh;
 }
-/* line 38, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 .header h1 {
   font-style: italic;
 }
 
-/* line 44, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 .avatar {
   -moz-box-shadow: 0 0 0px 3px #fff, 0 0 0 4px #ccc, 0 4px 6px #333;
   -webkit-box-shadow: 0 0 0px 3px #fff, 0 0 0 4px #ccc, 0 4px 6px #333;
@@ -119,12 +139,12 @@ img {
   height: 100px;
 }
 
-/* line 51, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 .carousel {
   position: relative;
 }
 
-/* line 55, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 .shots-container {
   width: 100%;
   overflow-x: scroll;
@@ -133,7 +153,7 @@ img {
   padding: 1em 0;
 }
 
-/* line 63, ../sass/style.scss */
+/* line 78, ../sass/style.scss */
 .shots {
   overflow: hidden;
   margin: 0;
@@ -142,7 +162,7 @@ img {
   min-height: 300px;
 }
 @media screen and (max-width: 450px) {
-  /* line 63, ../sass/style.scss */
+  /* line 78, ../sass/style.scss */
   .shots {
     /*
      * Shot width = 300px + 20px margin + 20px padding + 2px border
@@ -152,7 +172,7 @@ img {
     min-height: 250px;
   }
 }
-/* line 79, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 .shots li {
   float: left;
   width: 400px;
@@ -166,14 +186,14 @@ img {
   border-radius: 3px;
 }
 @media screen and (max-width: 450px) {
-  /* line 79, ../sass/style.scss */
+  /* line 94, ../sass/style.scss */
   .shots li {
     width: 300px;
     height: 225px;
   }
 }
 
-/* line 96, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 .mask {
   position: absolute;
   top: 0;
@@ -181,7 +201,7 @@ img {
   height: 100%;
 }
 
-/* line 102, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 .mask-left {
   left: 0;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
@@ -191,7 +211,7 @@ img {
   background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0));
 }
 
-/* line 106, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 .mask-right {
   right: 0;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
@@ -201,34 +221,34 @@ img {
   background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
 }
 
-/* line 112, ../sass/style.scss */
+/* line 127, ../sass/style.scss */
 .footer p {
   color: #777;
   padding: 0 1em;
 }
 
-/* line 118, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 .bg-whitesmoke {
   background: whitesmoke;
 }
 
-/* line 122, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 .content,
 .footer {
   padding-top: 25vh;
 }
 
-/* line 127, ../sass/style.scss */
-.content2 {
+/* line 142, ../sass/style.scss */
+#section-2 {
   border-top: 1px solid #e9e9e9;
   border-bottom: 1px solid #e9e9e9;
 }
 
-/* line 134, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 .content h1 {
   color: #ea4c89;
 }
-/* line 138, ../sass/style.scss */
+/* line 153, ../sass/style.scss */
 .content > p {
   font-size: .85em;
   color: #aaa;
@@ -241,7 +261,7 @@ img {
   font-weight: normal;
   font-style: normal;
 }
-/* line 155, ../sass/style.scss */
+/* line 170, ../sass/style.scss */
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon';
   speak: none;
@@ -255,32 +275,32 @@ img {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 169, ../sass/style.scss */
+/* line 184, ../sass/style.scss */
 .icon-google-plus:before {
   content: "\e600";
 }
 
-/* line 172, ../sass/style.scss */
+/* line 187, ../sass/style.scss */
 .icon-instagram:before {
   content: "\e601";
 }
 
-/* line 175, ../sass/style.scss */
+/* line 190, ../sass/style.scss */
 .icon-twitter:before {
   content: "\e602";
 }
 
-/* line 178, ../sass/style.scss */
+/* line 193, ../sass/style.scss */
 .icon-facebook:before {
   content: "\e603";
 }
 
-/* line 182, ../sass/style.scss */
+/* line 197, ../sass/style.scss */
 .social {
   margin: 2em 0;
   font-family: Helvetica, Arial, sans-serif;
 }
-/* line 186, ../sass/style.scss */
+/* line 201, ../sass/style.scss */
 .social li {
   position: relative;
   display: inline-block;
@@ -294,7 +314,7 @@ img {
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
-/* line 192, ../sass/style.scss */
+/* line 207, ../sass/style.scss */
 .social li:hover {
   -moz-transform: scale(1.25, 1.25);
   -ms-transform: scale(1.25, 1.25);
@@ -302,7 +322,7 @@ img {
   transform: scale(1.25, 1.25);
   color: whitesmoke;
 }
-/* line 197, ../sass/style.scss */
+/* line 212, ../sass/style.scss */
 .social li:before {
   position: absolute;
   width: 2em;
@@ -311,7 +331,7 @@ img {
   top: 1.5em;
   left: 50%;
 }
-/* line 205, ../sass/style.scss */
+/* line 220, ../sass/style.scss */
 .social li a {
   display: block;
   color: inherit;
@@ -323,45 +343,45 @@ img {
 }
 
 /* Twitter */
-/* line 219, ../sass/style.scss */
+/* line 234, ../sass/style.scss */
 .icon-twitter {
   color: #00a0d1;
 }
 
-/* line 220, ../sass/style.scss */
+/* line 235, ../sass/style.scss */
 .icon-twitter:hover {
   background: #00a0d1;
 }
 
 /* Instagram */
-/* line 222, ../sass/style.scss */
+/* line 237, ../sass/style.scss */
 .icon-instagram {
   color: #634d40;
 }
 
-/* line 223, ../sass/style.scss */
+/* line 238, ../sass/style.scss */
 .icon-instagram:hover {
   background: #634d40;
 }
 
 /* Facebook */
-/* line 225, ../sass/style.scss */
+/* line 240, ../sass/style.scss */
 .icon-facebook {
   color: #3b5998;
 }
 
-/* line 226, ../sass/style.scss */
+/* line 241, ../sass/style.scss */
 .icon-facebook:hover {
   background: #3b5998;
 }
 
 /* G+ */
-/* line 228, ../sass/style.scss */
+/* line 243, ../sass/style.scss */
 .icon-google-plus {
   color: #db4a39;
 }
 
-/* line 229, ../sass/style.scss */
+/* line 244, ../sass/style.scss */
 .icon-google-plus:hover {
   background: #db4a39;
 }

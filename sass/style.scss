@@ -21,6 +21,21 @@ body {
 .full-page {
     height: 100vh;
 }
+
+nav.page-navigation {
+    width: 80px;
+    background-color: #ebebeb;
+    position: fixed;
+    top:10%;
+    left:0;
+}
+nav.page-navigation li {
+    width: 100%;
+}
+nav.page-navigation a {
+    padding: 0.6em 10%;
+    width: 80%;
+}
  
 a {
     text-decoration: none;
@@ -124,7 +139,7 @@ img {
     padding-top: 25vh;
 }
 
-.content2 {
+#section-2 {
     border-top: 1px solid #e9e9e9;
     border-bottom: 1px solid #e9e9e9;
 }
