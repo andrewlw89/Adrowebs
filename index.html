@@ -7,25 +7,20 @@
 		    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="stylesheets/normalize.css" type="text/css" rel="stylesheet" >
-		<link href="stylesheets/style.css" type="text/css" rel="stylesheet" >
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,400italic' rel='stylesheet' type='text/css'>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="scripts/jquery.combinedScroll.js"></script>
-		<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$('.page-navigation').onePageNav();
-			});
-		</script>
+		<link href="stylesheets/style.css" type="text/css" rel="stylesheet" >
 	</head>
 	<body>
 	<div id="top"></div>
 		<div class="full-page bg-whitesmoke">
-			<nav class="site-navigation page-navigation">
-				<ul class="menu">
-					<li class="current"><a href="#top">Top</a></li>
+			<input type="checkbox" id="navbar-checkbox" class="navbar-checkbox">
+			<nav class="menu site-navigation page-navigation">
+				<ul>
+					<li class="current active"><a href="#top">Top</a></li>
 					<li><a href="#section-1">Projects</a></li>
 					<li><a href="#section-2">Contact</a></li>
 				</ul>
+				<label for="navbar-checkbox" class="navbar-handle"></label>
 			</nav>
 			<header class="header">
 			    <img src="images/me.jpg" width="100" height="100" class="avatar" />
@@ -60,6 +55,13 @@
 			</footer>
 		</div>
 	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="scripts/jquery.combinedScroll.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$('.page-navigation').onePageNav();
+		});
+	</script>
 	<script>
 		$.ajax({ 
 			type: "GET",

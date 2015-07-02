@@ -22,20 +22,147 @@ body {
     height: 100vh;
 }
 
-nav.page-navigation {
-    width: 80px;
-    background-color: #ebebeb;
+/*############## Nav bar CSS. Reference: http://blog.lavoie.sl/2013/11/responsive-menu-in-pure-css.html #######*/
+
+@media (min-width: 900px) {
+    .menu {
+        font-size: 1.2em;
+    }
+}
+
+.menu {
     position: fixed;
-    top:10%;
-    left:0;
+    padding: 0.5em;
+    background: #eee;
+    min-height: 2em;
+    line-height: 1em;
 }
-nav.page-navigation li {
-    width: 100%;
+
+.menu > ul {
+    transition: max-height 0.25s linear;
 }
-nav.page-navigation a {
-    padding: 0.6em 10%;
-    width: 80%;
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
+
+.menu li {
+    transition: visibility .25s linear;
+    display: inline-block;
+    border: 1px solid;
+    padding: .45em 1.1em;
+    margin: 0 .3em;
+    position: relative;
+}
+
+@media (min-width: 651px) {
+    .menu li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        margin-top: 1px;
+        left: -1px;
+        right: -1px;
+    }
+    .menu li:hover ul {
+        display: block;
+    }
+
+    .menu li li {
+        margin: -1px 0 0 0;
+        box-sizing: border-box;
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    .menu > ul {
+        max-height: 0;
+        overflow: hidden;
+        margin: 0 3.5em 0 1em;
+    }
+
+    .menu li {
+        visibility: hidden;
+        display: block;
+        padding: 0.5em 0.6em;
+        border: none;
+    }
+
+    .menu li ul {
+        margin-top: 0.5em;
+        border-left: 1px solid #000;
+    }
+
+    .menu .navbar-handle {
+        display: block;
+    }
+
+    #navbar-checkbox:checked + .menu ul {
+        max-height: 300px;
+    }
+
+    #navbar-checkbox:checked + .menu li {
+        visibility: visible;
+    }
+
+    #navbar-checkbox:checked + .menu .navbar-handle,
+    #navbar-checkbox:checked + .menu .navbar-handle:after,
+    #navbar-checkbox:checked + .menu .navbar-handle:before {
+        border-color: #aaa;
+    }
+}
+
+.navbar-checkbox {
+    display: none;
+}
+
+.navbar-handle {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    font-size: 45px;
+    padding: .5em 0;
+    height: 0;
+    width: 1.66666667em;
+    border-top: 0.13333333em solid;
+}
+
+.navbar-handle:before,
+.navbar-handle:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    content: ' ';
+    border-top: 0.13333333em solid;
+}
+
+.navbar-handle:before {
+    top: 0.37777778em;
+}
+
+.navbar-handle:after {
+    top: 0.88888889em;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.menu .navbar-handle {
+    position: absolute;
+    font-size: 1.2em;
+    top: 0.7em;
+    right: 12px;
+    z-index: 10;
+}
+
+/*####################################################################################################*/
  
 a {
     text-decoration: none;
