@@ -286,7 +286,7 @@ img {
  
 .content,
 .footer {
-    padding-top: 25vh;
+    padding-top: 15vh;
 }
 
 #section-2 {
@@ -380,6 +380,10 @@ img {
     }
 }
 
+.socialContainer {
+    margin-top: 5%;
+}
+
 /* Twitter */
 .icon-twitter {color: #00a0d1}
 .icon-twitter:hover {background:#00a0d1}
@@ -397,6 +401,92 @@ img {
 
 .modal-content {
     margin-top: 20%;
+}
+
+/* #################################### */
+
+.label {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+/* forms.less */
+label {
+  font-weight: normal;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: 36px;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #333333;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #999999;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.form-control::-moz-placeholder {
+  color: #999999;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #999999;
+}
+.form-control::-webkit-input-placeholder {
+  color: #999999;
+  opacity: 1 !important;
+}
+.form-control:focus {
+  border-color: #4fbfa8;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(79, 191, 168, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(79, 191, 168, 0.6);
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+.btn {
+  font-weight: normal;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 6px 12px;
+  font-size: 12px;
+  line-height: 1.42857143;
+  border-radius: 0;
+}
+.btn-primary {
+  color: #4fbfa8;
+  background-color: #ffffff;
+  background-image: none;
+  border-color: #4fbfa8;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #4fbfa8;
+  background-color: #ebebeb;
+  border-color: #389985;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+
+.inputLabel {
+    padding-left: 0;
+    padding-bottom: 3px;
+}
+
+#contact-form {
+    padding: 0 50px;
 }
 
 

@@ -46,6 +46,42 @@
 		</div>
 		<div class="full-page bg-whitesmoke" id="section-2">
 			<footer class="footer">
+			<h1>Contact Me!</h1>
+			<br />
+			<div class="row">
+                <div class="col-md-6">
+                  <form id="contact-form" method="post" action="contactform.php" class="contact-form">
+                    <div class="controls">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label class="col-sm-6 text-left inputLabel" for="first_name">Your firstname *</label>
+                            <input type="text" name="first_name" placeholder="Enter your firstname" required="required" class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label class="col-sm-6 text-left inputLabel" for="last_name">Your lastname *</label>
+                            <input type="text" name="last_name" placeholder="Enter your  lastname" required="required" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-sm-6 text-left inputLabel" for="email">Your email *</label>
+                        <input type="email" name="email" placeholder="Enter your  email" required="required" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label class="col-sm-6 text-left inputLabel" for="comments">Your message for us *</label>
+                        <textarea rows="4" name="comments" placeholder="Enter your message" required="required" class="form-control"></textarea>
+                      </div>
+                      <div class="text-center">
+                        <input type="submit" name="name" value="Send message" class="btn btn-primary btn-block">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+            </div>
+            <div class="socialContainer">
 			    <h1>Find Me on the Web</h1>
 			    <p>You can contact or follow me via any of these services:</p>
 			    <ul class="social">
@@ -54,6 +90,7 @@
 			        <li class="icon-instagram"><a href="#">Instagram</a></li>
 			        <li class="icon-google-plus"><a href="#">Google Plus</a></li>
 			    </ul>
+			</div>
 			</footer>
 		</div>
 
