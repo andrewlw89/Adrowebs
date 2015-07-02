@@ -146,6 +146,7 @@
 		});
 		function jsonFlickrApi(response) {
 			var responseArray = response.photos.photo;
+			responseArray.reverse();
 			var index = 0;
 			responseArray.forEach(function(data) {
 				index++;

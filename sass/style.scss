@@ -191,7 +191,8 @@ img {
     height: auto;
 }
 
-// Header styles
+/*################################# Header styles ###################################################*/
+
 .header {
     padding-top: 30vh;
  
@@ -207,6 +208,8 @@ img {
     width: 100px;
     height: 100px;
 }
+
+/*########################################### Image Carousel ############################################*/
 
 .carousel {
     position: relative;
@@ -267,6 +270,8 @@ img {
     right: 0;
     @include background( linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1)) );
 }
+
+/*############################################### Contact page ################################*/
 
 .footer {
     p {
@@ -387,6 +392,12 @@ img {
 /* G+ */
 .icon-google-plus {color: #db4a39}
 .icon-google-plus:hover {background: #db4a39}
+
+/*###################################### Bootstrap Modals ##########################################*/
+
+.modal-content {
+    margin-top: 70px;
+}
 
 
 
