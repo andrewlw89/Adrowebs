@@ -8,6 +8,8 @@
 		<![endif]-->
 		<link href="stylesheets/normalize.css" type="text/css" rel="stylesheet" >
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,400italic' rel='stylesheet' type='text/css'>
+		<link href="stylesheets/bootstrap.min.css" type="text/css" rel="stylesheet" >
+		<link href="stylesheets/bootstrap-theme.min.css" type="text/css" rel="stylesheet" >
 		<link href="stylesheets/style.css" type="text/css" rel="stylesheet" >
 	</head>
 	<body>
@@ -54,8 +56,82 @@
 			    </ul>
 			</footer>
 		</div>
+
+		<!-- Model 1 -->
+
+		<div class="modal fade" id="modalimage1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+			<div class="modal-dialog">
+			    <div class="modal-content">
+				    <div class="modal-header">
+					     <h2 class="modal-title modalheadertext" id="myModalLabel1">Dank Watch</h2>
+					</div>
+				    <div class="modal-body modal1">
+				        <p class="text-center modaltext">This site was custom-built as a personal website for an artist to display his work. I built this site with simplicity in mind so as to make the website as easily navigable as possible. It was built using only HTML and CSS so is light weight and cross-browser compatible. I have plans to revamp the website in the near future.</p>
+			        </div>
+				    <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				    </div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Model 2 -->
+
+		<div class="modal fade" id="modalimage2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+			<div class="modal-dialog">
+			    <div class="modal-content">
+				    <div class="modal-header">
+					     <h2 class="modal-title modalheadertext" id="myModalLabel2">Dank Watch</h2>
+					</div>
+				    <div class="modal-body modal2">
+				        <p class="text-center modaltext">This site was custom-built as a personal website for an artist to display his work. I built this site with simplicity in mind so as to make the website as easily navigable as possible. It was built using only HTML and CSS so is light weight and cross-browser compatible. I have plans to revamp the website in the near future.</p>
+			        </div>
+				    <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				    </div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Model 3 -->
+
+		<div class="modal fade" id="modalimage3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+			<div class="modal-dialog">
+			    <div class="modal-content">
+				    <div class="modal-header">
+					     <h2 class="modal-title modalheadertext" id="myModalLabel3">Dank Watch</h2>
+					</div>
+				    <div class="modal-body modal3">
+				        <p class="text-center modaltext">This site was custom-built as a personal website for an artist to display his work. I built this site with simplicity in mind so as to make the website as easily navigable as possible. It was built using only HTML and CSS so is light weight and cross-browser compatible. I have plans to revamp the website in the near future.</p>
+			        </div>
+				    <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				    </div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Model 4 -->
+
+		<div class="modal fade" id="modalimage4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
+			<div class="modal-dialog">
+			    <div class="modal-content">
+				    <div class="modal-header">
+					     <h2 class="modal-title modalheadertext" id="myModalLabel4">Dank Watch</h2>
+					</div>
+				    <div class="modal-body modal4">
+				        <p class="text-center modaltext">This site was custom-built as a personal website for an artist to display his work. I built this site with simplicity in mind so as to make the website as easily navigable as possible. It was built using only HTML and CSS so is light weight and cross-browser compatible. I have plans to revamp the website in the near future.</p>
+			        </div>
+				    <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				    </div>
+				</div>
+			</div>
+		</div>
+
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="scripts/bootstrap.min.js"></script>
 	<script src="scripts/jquery.combinedScroll.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
@@ -70,17 +146,25 @@
 		});
 		function jsonFlickrApi(response) {
 			var responseArray = response.photos.photo;
+			var index = 0;
 			responseArray.forEach(function(data) {
+				index++;
+				console.log(index);
 				var farm = data.farm;
 				var id = data.id;
 				var server = data.server;
 				var secret = data.secret;
 				var title = data.title;
 				var imageUrl = "https://farm" + farm + ".staticflickr.com/" + server + "/" + id + "_" + secret + ".jpg";
-				var imageTag = '<li><a href=#><img src="' + imageUrl + '" alt="' + title + '"></a></li>';
+				var imageOuterTag = '<li>';
+				var imageTag = '<img data-toggle="modal" data-target="#modalimage' + index + '" src="' + imageUrl + '" alt="' + title + '">';
+				var imageClosingTag = '</li>';
+				var totalTag = imageOuterTag + imageTag + imageClosingTag;
 				$(".loading").remove();
-				$(".shots").append(imageTag);
+				$(".shots").append(totalTag);
+				$(".modal"+ index).prepend(imageTag);
 			});
+
 		}
 	</script>
 </html>
