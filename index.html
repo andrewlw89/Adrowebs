@@ -6,9 +6,10 @@
 		<!--[if IE]>
 		    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+		<link href="stylesheets/normalize.css" type="text/css" rel="stylesheet" >
 		<link href="stylesheets/style.css" type="text/css" rel="stylesheet" >
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,400italic' rel='stylesheet' type='text/css'>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script>
 			$.ajax({ 
 				type: "GET",
@@ -32,32 +33,38 @@
 		</script>
 	</head>
 	<body>
-		<header class="header">
-		    <img src="images/me.jpg" width="100" height="100" class="avatar" />
-		    <h1>My name is Andrew Williams. <br />I'm a designer in Jacksonville.</h1>
-		</header>
-		<section class="content">
-		    <h1 class="dribbble">Latest Projects</h1>
-		    <div class="carousel">
-		        <div class="shots-container">
-		            <ul class="shots">
-		                <li class="loading"><img src="images/loading.gif" alt="Loading" /></li>
-		            </ul>
-		        </div>
-		        <span class="mask mask-right"></span>
-		        <span class="mask mask-left"></span>
-		    </div>
-		    <p>&larr; scroll to view &rarr;</p>
-		</section>
-		<footer class="footer">
-		    <h1>Find Me on the Web</h1>
-		    <p>You can contact or follow me via any of these services:</p>
-		    <ul class="social">
-		        <li class="icon-facebook"><a href="#">Facebook</a></li>
-		        <li class="icon-twitter"><a href="#">Twitter</a></li>
-		        <li class="icon-instagram"><a href="#">Instagram</a></li>
-		        <li class="icon-google-plus"><a href="#">Google Plus</a></li>
-		    </ul>
-		</footer>
+		<div class="full-page bg-whitesmoke content1">
+			<header class="header">
+			    <img src="images/me.jpg" width="100" height="100" class="avatar" />
+			    <h1>My name is Andrew Williams. <br />I'm a designer in Jacksonville.</h1>
+			</header>
+		</div>
+		<div class="full-page content2">
+			<section class="content">
+			    <h1 class="projects">Latest Projects</h1>
+			    <div class="carousel">
+			        <div class="shots-container">
+			            <ul class="shots">
+			                <li class="loading"><img src="images/loading.gif" alt="Loading" /></li>
+			            </ul>
+			        </div>
+			        <span class="mask mask-right"></span>
+			        <span class="mask mask-left"></span>
+			    </div>
+			    <p>&larr; scroll to view &rarr;</p>
+			</section>
+		</div>
+		<div class="full-page bg-whitesmoke content3">
+			<footer class="footer">
+			    <h1>Find Me on the Web</h1>
+			    <p>You can contact or follow me via any of these services:</p>
+			    <ul class="social">
+			        <li class="icon-facebook"><a href="#">Facebook</a></li>
+			        <li class="icon-twitter"><a href="#">Twitter</a></li>
+			        <li class="icon-instagram"><a href="#">Instagram</a></li>
+			        <li class="icon-google-plus"><a href="#">Google Plus</a></li>
+			    </ul>
+			</footer>
+		</div>
 	</body>
 </html>
