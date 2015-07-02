@@ -133,11 +133,7 @@ img {
   overflow: hidden;
   margin: 0;
   padding: 0 2%;
-  /*
-   * Shot width = 400px + 20px margin + 20px padding + 2px border
-   * 442 * 10 (# of shots)
-   */
-  width: 1768px;
+  width: 4420px;
   min-height: 300px;
 }
 @media screen and (max-width: 450px) {
@@ -145,28 +141,27 @@ img {
   .shots {
     /*
      * Shot width = 300px + 20px margin + 20px padding + 2px border
-     * 342 * 4 (# of shots)
+     * 342 * 10 (# of shots)
      */
-    width: 1360px;
-    /* 340 * 4 */
+    width: 1368px;
     min-height: 250px;
   }
 }
-/* line 78, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 .shots li {
   float: left;
   width: 400px;
   height: 300px;
   margin: 0 10px;
   padding: 10px;
-  background: #fff url(../images/loading.gif) 100px 50% no-repeat;
+  background: #fff url(images/loading.gif) 100px 50% no-repeat;
   border: 1px solid #ddd;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 @media screen and (max-width: 450px) {
-  /* line 78, ../sass/style.scss */
+  /* line 74, ../sass/style.scss */
   .shots li {
     width: 300px;
     height: 225px;

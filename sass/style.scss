@@ -59,19 +59,15 @@ img {
     overflow: hidden;
     margin: 0;
     padding: 0 2%;
-    /*
-     * Shot width = 400px + 20px margin + 20px padding + 2px border
-     * 442 * 10 (# of shots)
-     */
-    width: 1768px;
+    width: 4420px;
     min-height: 300px;
  
     @media screen and (max-width: 450px) {
         /*
          * Shot width = 300px + 20px margin + 20px padding + 2px border
-         * 342 * 4 (# of shots)
+         * 342 * 10 (# of shots)
          */
-        width: 1360px; /* 340 * 4 */
+        width: 1368px;
         min-height: 250px;
     }
  
@@ -81,7 +77,7 @@ img {
         height: 300px;
         margin: 0 10px;
         padding: 10px;
-        background: #fff url(../images/loading.gif) 100px 50% no-repeat;
+        background: #fff url(images/loading.gif) 100px 50% no-repeat;
         border: 1px solid #ddd;
         @include border-radius(3px);
  
