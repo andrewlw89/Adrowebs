@@ -31,9 +31,8 @@ body {
 }
 
 .menu {
-    position: fixed;
-    padding: 0.5em;
-    background: #eee;
+    //padding: 0.5em;
+    background: slateblue;
     min-height: 2em;
     line-height: 1em;
 }
@@ -43,18 +42,35 @@ body {
 }
 
 .menu ul {
-    margin: 0;
-    padding: 0;
+    list-style: none;
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 .menu li {
     transition: visibility .25s linear;
     display: inline-block;
-    border: 1px solid;
-    padding: .45em 1.1em;
-    margin: 0 .3em;
+    margin-right: -4px;
+    padding: 1.2em 1.1em;
+    transition: .3s background-color;
     position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.menu li:hover {
+    background-color: #005f5f;
+}
+ 
+.menu a.active {
+    background-color: #fff;
+    color: #444;
+    cursor: default;
 }
 
 @media (min-width: 651px) {
@@ -80,6 +96,7 @@ body {
 @media (max-width: 650px) {
     .menu > ul {
         max-height: 0;
+        padding: 1.7em;
         overflow: hidden;
         margin: 0 3.5em 0 1em;
     }
@@ -152,6 +169,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 9999;
 }
 
 .menu .navbar-handle {
@@ -159,7 +177,7 @@ body {
     font-size: 1.2em;
     top: 0.7em;
     right: 12px;
-    z-index: 10;
+    z-index: 9999;
 }
 
 /*####################################################################################################*/
