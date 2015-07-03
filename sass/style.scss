@@ -31,7 +31,6 @@ body {
 }
 
 .menu {
-    //padding: 0.5em;
     background: slateblue;
     min-height: 2em;
     line-height: 1em;
@@ -61,7 +60,7 @@ body {
     text-decoration: none;
     color: #fff;
     display: block;
-    padding: 20px;
+    padding: 1.2em;
 }
 
 .menu li:hover {
@@ -95,9 +94,12 @@ body {
 }
 
 @media (max-width: 650px) {
+    .menu {
+        padding: 1.7em;
+    }
+
     .menu > ul {
         max-height: 0;
-        padding: 1.7em;
         overflow: hidden;
         margin: 0 3.5em 0 1em;
     }
@@ -112,6 +114,10 @@ body {
     .menu li ul {
         margin-top: 0.5em;
         border-left: 1px solid #000;
+    }
+
+    .menu a {
+        padding: 0;
     }
 
     .menu .navbar-handle {
