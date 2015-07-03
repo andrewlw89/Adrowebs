@@ -25,11 +25,30 @@
 				<label for="navbar-checkbox" class="navbar-handle"></label>
 			</nav>
 			<header class="header">
-			    <img src="images/me.jpg" width="100" height="100" class="avatar" />
+			    <img src="images/logo.png" class="logo">
 			    <h1>My name is Andrew Williams. <br />I'm a designer in Jacksonville.</h1>
 			</header>
 		</div>
 		<div class="full-page" id="section-1">
+			<section class="about">
+				<div class="row">
+					<h1 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">About me</h1>
+					<div class="col-sm-2 col-md-3"></div>
+					<p class="col-xs-12 col-sm-8 col-md-6">
+						I am a front-end web developer with experience in HTML5, CSS, SASS, JavaScript, jQuery, Knockout.js, JSON api services, and work flow frameworks such as gulp.js, compass, and bower. I graduated in 2014 from New College of Florida, located in Sarasota, Florida and worked for a year with Microsoft as a Technical Services Advisor. In the past I have worked exclusively as a freelance web developer but am looking to join a team of developers.
+					</p>
+					<div class="col-sm-2 col-md-3"></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-2 col-md-3"></div>
+					<p class="col-xs-12 col-sm-8 col-md-6">
+						 I am also a Udacity graduate with my Front-end Web Developer Nanodegree and am open to be hired for your next project. If you'd like to learn more about me or have some questions, feel free to visit the contact section below and shoot me an email!
+					</p>
+					<div class="col-sm-2 col-md-3"></div>
+				</div>				
+			</section>
+		</div>
+		<div class="full-page" id="section-2">
 			<section class="content">
 			    <h1 class="projects">Latest Projects</h1>
 			    <div class="carousel">
@@ -44,7 +63,7 @@
 			    <p>&larr; scroll to view &rarr;</p>
 			</section>
 		</div>
-		<div class="full-page bg-whitesmoke" id="section-2">
+		<div class="full-page bg-whitesmoke" id="section-3">
 			<footer class="footer">
 			<h1>Contact Me!</h1>
 			<br />
@@ -57,13 +76,13 @@
                         <div class="col-sm-6">
                           <div class="form-group">
                             <label class="col-xs-12 col-sm-12 text-left inputLabel" for="first_name">Your first name *</label>
-                            <input type="text" name="first_name" placeholder="Enter your firstname" required="required" class="form-control">
+                            <input type="text" name="first_name" placeholder="Enter your first name" required="required" class="form-control">
                           </div>
                         </div>
                         <div class="col-sm-6">
                           <div class="form-group">
                             <label class="col-xs-12 col-sm-12 text-left inputLabel" for="last_name">Your last name *</label>
-                            <input type="text" name="last_name" placeholder="Enter your lastname" required="required" class="form-control">
+                            <input type="text" name="last_name" placeholder="Enter your last name" required="required" class="form-control">
                           </div>
                         </div>
                       </div>
@@ -201,7 +220,7 @@
 				var title = data.title;
 				var imageUrl = "https://farm" + farm + ".staticflickr.com/" + server + "/" + id + "_" + secret + ".jpg";
 				var imageOuterTag = '<li>';
-				var imageTag = '<img data-toggle="modal" data-target="#modalimage' + index + '" src="' + imageUrl + '" alt="' + title + '">';
+				var imageTag = '<img class="flickr" data-toggle="modal" data-target="#modalimage' + index + '" src="' + imageUrl + '" alt="' + title + '">';
 				var imageClosingTag = '</li>';
 				var totalTag = imageOuterTag + imageTag + imageClosingTag;
 				$(".loading").remove();
