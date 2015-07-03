@@ -50,6 +50,7 @@ body {
 
 .menu li {
     transition: visibility .25s linear;
+    font-family: 'Ubuntu', Georgia, sans-serif;
     display: inline-block;
     margin-right: -4px;
     padding: 0 1.1em;
@@ -337,6 +338,7 @@ h1.heading:after {
          */
         width: 1368px;
         min-height: 250px;
+        overflow: hidden;
     }
  
     li {
@@ -395,7 +397,8 @@ h1.heading:after {
 }
 
 .content,
-.about {
+.about,
+.footer {
  
     h1 {
         color: #55a0d3;
