@@ -52,7 +52,7 @@ body {
     transition: visibility .25s linear;
     display: inline-block;
     margin-right: -4px;
-    padding: 1.2em 1.1em;
+    padding: 0 1.1em;
     transition: .3s background-color;
     position: relative;
 }
@@ -61,6 +61,7 @@ body {
     text-decoration: none;
     color: #fff;
     display: block;
+    padding: 20px;
 }
 
 .menu li:hover {
@@ -284,9 +285,12 @@ img {
     background: whitesmoke;
 }
  
-.content,
+.content {
+    padding-top: 20vh;
+}
+
 .footer {
-    padding-top: 15vh;
+    padding-top: 8vh;
 }
 
 #section-2 {
@@ -447,6 +451,7 @@ label {
 }
 .form-group {
   margin-bottom: 20px;
+  //padding-left: 10px;
 }
 
 .btn {
@@ -481,12 +486,21 @@ label {
 }
 
 .inputLabel {
-    padding-left: 0;
     padding-bottom: 3px;
 }
 
 #contact-form {
-    padding: 0 50px;
+    margin: 0 auto;
+}
+
+.row {
+    margin-right:0;
+    margin-left:0;
+}
+
+.col-sm-6 {
+    padding-right: 0;
+    padding-left: 0;
 }
 
 
