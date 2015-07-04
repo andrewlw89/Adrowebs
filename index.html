@@ -6,11 +6,11 @@
 		<!--[if IE]>
 		    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="stylesheets/normalize.css" type="text/css" rel="stylesheet" >
+		<link href="stylesheets/normalize.min.css" type="text/css" rel="stylesheet" >
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,400italic' rel='stylesheet' type='text/css'>
 		<link href="stylesheets/bootstrap.min.css" type="text/css" rel="stylesheet" >
 		<link href="stylesheets/bootstrap-theme.min.css" type="text/css" rel="stylesheet" >
-		<link href="stylesheets/style.css" type="text/css" rel="stylesheet" >
+		<link href="stylesheets/style.min.css" type="text/css" rel="stylesheet" >
 	</head>
 	<body>
 	<div id="top"></div>
@@ -27,7 +27,7 @@
 			</nav>
 			<header class="header">
 			    <img src="images/logo.png" class="logo">
-			    <h1>My name is Andrew Williams. <br />I'm a designer in Jacksonville.</h1>
+			    <h1>My name is Andrew Williams. <br />I'm a developer in Jacksonville.</h1>
 			</header>
 		</div>
 		<div class="full-page" id="section-1">
@@ -209,7 +209,6 @@
 			var index = 0;
 			responseArray.forEach(function(data) {
 				index++;
-				console.log(index);
 				var farm = data.farm;
 				var id = data.id;
 				var server = data.server;
