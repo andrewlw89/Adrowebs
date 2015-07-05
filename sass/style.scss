@@ -35,6 +35,7 @@ body {
     background: #253e8f;
     min-height: 2em;
     line-height: 1em;
+    display: none;
 }
 
 .menu > ul {
@@ -183,6 +184,7 @@ img {
 
 .header {
     padding-top: 12vh;
+    display: none;
  
     h1 {
         font-style: italic;
@@ -190,6 +192,7 @@ img {
 }
 
 .logo {
+    //display: none;
     margin-bottom: 7%;
 }
 
