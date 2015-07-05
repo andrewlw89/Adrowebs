@@ -296,6 +296,10 @@ h1.heading:after {
 .carousel {
     position: relative;
 }
+
+.projects {
+    display: none;
+}
  
 .shots-container {
     width: 100%;
@@ -303,6 +307,7 @@ h1.heading:after {
     -webkit-overflow-scrolling: touch;
     position: relative;
     padding: 1em 0;
+    display: none;
 }
 
 .shots {
@@ -357,6 +362,8 @@ h1.heading:after {
 /*############################################### Contact page ################################*/
 
 .footer {
+    display: none;
+    
     p {
         color: #777;
         padding: 0 1em;
@@ -370,7 +377,6 @@ h1.heading:after {
 .content, 
 .footer {
     padding-top: 22vh;
-    display: none;
 }
 
 #section-2 {

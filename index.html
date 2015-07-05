@@ -10,6 +10,8 @@
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,400italic' rel='stylesheet' type='text/css'>
 		<link href="stylesheets/bootstrap.min.css" type="text/css" rel="stylesheet" >
 		<link href="stylesheets/bootstrap-theme.min.css" type="text/css" rel="stylesheet" >
+		<link href="stylesheets/jquery-ui.structure.min.css" type="text/css" rel="stylesheet" >
+		<link href="stylesheets/jquery-ui.theme.min.css" type="text/css" rel="stylesheet" >
 		<link href="stylesheets/style.css" type="text/css" rel="stylesheet" >
 	</head>
 	<body>
@@ -112,7 +114,7 @@
 			</footer>
 		</div>
 
-		<!-- Model 1 -->
+		<!-- Modal 1 -->
 
 		<div class="modal fade" id="modalimage1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
 			<div class="modal-dialog">
@@ -131,7 +133,7 @@
 			</div>
 		</div>
 
-		<!-- Model 2 -->
+		<!-- Modal 2 -->
 
 		<div class="modal fade" id="modalimage2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
 			<div class="modal-dialog">
@@ -150,7 +152,7 @@
 			</div>
 		</div>
 
-		<!-- Model 3 -->
+		<!-- Modal 3 -->
 
 		<div class="modal fade" id="modalimage3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
 			<div class="modal-dialog">
@@ -169,7 +171,7 @@
 			</div>
 		</div>
 
-		<!-- Model 4 -->
+		<!-- Modal 4 -->
 
 		<div class="modal fade" id="modalimage4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
 			<div class="modal-dialog">
@@ -193,42 +195,53 @@
 	<script src="scripts/bootstrap.min.js"></script>
 	<script src="node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
 	<script src="scripts/jquery.combinedScroll.js"></script>
+	<script src="scripts/jquery-ui.min.js"></script>
 	<script type="text/javascript">
+	/*
+	All animations and plugins that fire on page load
+	*/
 		jQuery(document).ready(function($) {
-			$('.logo').fadeIn(800);
+			$('.logo').fadeIn(1000);
 			setTimeout(function() {
-				$('.header h1').css({display:'block'}).animate({marginTop:'0px', opacity:'1'},500);
+				$('.header h1').css({display:'block'}).animate({marginTop:'0px', opacity:'1'},700);
 			}, 600);
+			// Call to initiate scrollTo jquery plugin
 			$('.page-navigation').onePageNav();
 		});
+		// Using waypoint js library to set page waypoints and animations
 		var waypoint1 = new Waypoint({
 			element: document.getElementById('section-1'),
 			handler: function() {
-			    $('.about').fadeIn(500);
+			    $('.about').fadeIn(700);
 			},
 			offset: '50%'
 		});
 		var waypoint2 = new Waypoint({
 			element: document.getElementById('section-2'),
 			handler: function() {
-			    $('.content').fadeIn(500);
+			    $('.projects').fadeIn(1200);
+			    setTimeout(function() {
+			    	$('.shots-container').show("slide", { direction: "left" }, 1000); // Using jQuery UI for slide functionality
+			    }, 200);
 			},
 			offset: '50%'
 		});
 		var waypoint3 = new Waypoint({
 			element: document.getElementById('section-3'),
 			handler: function() {
-			    $('.footer').fadeIn(500);
+			    $('.footer').fadeIn(700);
 			},
 			offset: '50%'
 		});
 	</script>
 	<script>
+	// Ajax call to Flickr API
 		$.ajax({ 
 			type: "GET",
 			dataType: "jsonp",
 			url: "https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=46703527e4effd0b1cf5f879440716c3&user_id=132728132%40N04&format=json"
 		});
+		// Function called on JASONP response from Flickr
 		function jsonFlickrApi(response) {
 			var responseArray = response.photos.photo;
 			responseArray.reverse();
