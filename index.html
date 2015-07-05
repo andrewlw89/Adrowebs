@@ -191,12 +191,33 @@
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="scripts/bootstrap.min.js"></script>
+	<script src="node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
 	<script src="scripts/jquery.combinedScroll.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
-
 			$('.header, .menu').fadeIn("slow");
 			$('.page-navigation').onePageNav();
+		});
+		var waypoint1 = new Waypoint({
+			element: document.getElementById('section-1'),
+			handler: function() {
+			    $('.about').fadeIn(500);
+			},
+			offset: 500
+		});
+		var waypoint2 = new Waypoint({
+			element: document.getElementById('section-2'),
+			handler: function() {
+			    $('.content').fadeIn(500);
+			},
+			offset: 500
+		});
+		var waypoint3 = new Waypoint({
+			element: document.getElementById('section-3'),
+			handler: function() {
+			    $('.footer').fadeIn(500);
+			},
+			offset: 500
 		});
 	</script>
 	<script>

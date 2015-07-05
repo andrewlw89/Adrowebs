@@ -241,6 +241,7 @@ h1.heading:after {
 
 .about {
     padding-top: 20vh;
+    display: none;
 }
 
 @media screen and (min-width: 992px) {
@@ -367,6 +368,7 @@ h1.heading:after {
 .content, 
 .footer {
     padding-top: 22vh;
+    display: none;
 }
 
 #section-2 {
