@@ -195,7 +195,10 @@
 	<script src="scripts/jquery.combinedScroll.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
-			$('.header').fadeIn(1200);
+			$('.logo').fadeIn(800);
+			setTimeout(function() {
+				$('.header h1').css({display:'block'}).animate({marginTop:'0px', opacity:'1'},500);
+			}, 600);
 			$('.page-navigation').onePageNav();
 		});
 		var waypoint1 = new Waypoint({

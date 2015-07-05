@@ -184,15 +184,17 @@ img {
 
 .header {
     padding-top: 12vh;
-    display: none;
  
     h1 {
         font-style: italic;
+        display:none;
+        margin-top:-15px;
+        opacity:0;
     }
 }
 
 .logo {
-    //display: none;
+    display: none;
     margin-bottom: 7%;
 }
 
