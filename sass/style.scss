@@ -198,10 +198,35 @@ img {
     margin-bottom: 7%;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 420px) and (min-width: 321px) {
     .header {
         padding-left: 10px;
         padding-right: 10px;
+
+        img {
+            max-width: 85%;
+        }
+
+        h1 {
+            font-size: 1.8em;
+            padding: .6em 1em;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    nav.menu {
+        padding: 1.45em;
+    }
+
+    img.logo {
+        padding-top: 5%;
+        max-width: 75%;
+    }
+
+    h1 {
+        font-size: 1.3em;
+        padding: 0 1.5em;
     }
 }
 
